@@ -58,7 +58,7 @@ function initOperationalLayer(map) {
 	}, dojo.byId("search"));
 
 	esri.config.defaults.map.logoLink = "https://dola.colorado.gov/";
-	document.getElementsByClassName('logo-med')[0].style.backgroundImage = "url(\"https://dola.colorado.gov/gis-php/files/gis-images/CO_LOGO.png\")";
+	document.getElementsByClassName('logo-med')[0].style.backgroundImage = "url(\"https://storage.cloud.google.com/censusmap-how-to/gis-images/CO_LOGO.png\")";
 	document.getElementsByClassName('logo-med')[0].style.backgroundRepeat = "no-repeat";
 
 	// start widget
@@ -1651,7 +1651,7 @@ function Clickhereformap(mainid) {
 
 	var newobj = new Object();
 	newobj.zoom = map.getZoom();
-	newobj.filename = "https://dola.colorado.gov/gis-php/phantomComprPoverty.html";
+	newobj.filename = "https://storage.cloud.google.com/censusmap-how-to/phantomComprPoverty.html";
 	newobj.lat = newy;
 	newobj.lng = newx;
 	newobj.title = encodeURIComponent(sendtitle);
@@ -1663,7 +1663,7 @@ function Clickhereformap(mainid) {
 
 	$('#printspan').html('Processing...');
 
-	$.get("https://dola.colorado.gov/gis-php/comprpoverty.php", newobj, function() {
+	$.get("https://storage.cloud.google.com/censusmap-how-to/comprpoverty.php", newobj, function() {
 		$('#printspan').html('DOWNLOAD');
 		$('#uniform-printbtns').attr("onClick", "opmapwin('" + newobj.outname + "')");
 	});
