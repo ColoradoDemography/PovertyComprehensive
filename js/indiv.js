@@ -28,7 +28,7 @@ function init() {
 	dojo.connect(map, "onLoad", initOperationalLayer);
 
 	dojo.byId("title").innerHTML = "Poverty by Age by Ratio";
-	dojo.byId("subtitle").innerHTML = "Source: Table B17024, ACS 2011-2015 5Y : Census Tracts";
+	dojo.byId("subtitle").innerHTML = "Source: Table B17024, ACS 2014-2018 5Y : Census Tracts";
 }
 
 function initOperationalLayer(map) {
@@ -58,7 +58,7 @@ function initOperationalLayer(map) {
 	}, dojo.byId("search"));
 
 	esri.config.defaults.map.logoLink = "https://dola.colorado.gov/";
-	document.getElementsByClassName('logo-med')[0].style.backgroundImage = "url(\"https://storage.cloud.google.com/censusmap-how-to/gis-images/CO_LOGO.png\")";
+	document.getElementsByClassName('logo-med')[0].style.backgroundImage = "url(\"https://dola.colorado.gov/gis-php/files/gis-images/CO_LOGO.png\")";
 	document.getElementsByClassName('logo-med')[0].style.backgroundRepeat = "no-repeat";
 
 	// start widget
@@ -69,7 +69,7 @@ function initOperationalLayer(map) {
 	infoTemplate.setContent(getText);
 
 
-	featureLayer = new esri.layers.FeatureLayer("https://services.arcgis.com/IamIM3RJ5xHykalK/arcgis/rest/services/PovertyComprehensive_1115/FeatureServer/0", {
+	featureLayer = new esri.layers.FeatureLayer("https://services.arcgis.com/IamIM3RJ5xHykalK/arcgis/rest/services/PovertyComprehensive_1418/FeatureServer/0", {
 		mode : esri.layers.FeatureLayer.MODE_ONDEMAND,
 		outFields : ["*"],
 		infoTemplate : infoTemplate
@@ -1651,7 +1651,7 @@ function Clickhereformap(mainid) {
 
 	var newobj = new Object();
 	newobj.zoom = map.getZoom();
-	newobj.filename = "https://storage.cloud.google.com/censusmap-how-to/phantomComprPoverty.html";
+	newobj.filename = "https://dola.colorado.gov/gis-php/phantomComprPoverty.html";
 	newobj.lat = newy;
 	newobj.lng = newx;
 	newobj.title = encodeURIComponent(sendtitle);
@@ -1663,7 +1663,7 @@ function Clickhereformap(mainid) {
 
 	$('#printspan').html('Processing...');
 
-	$.get("https://storage.cloud.google.com/censusmap-how-to/comprpoverty.php", newobj, function() {
+	$.get("https://dola.colorado.gov/gis-php/comprpoverty.php", newobj, function() {
 		$('#printspan').html('DOWNLOAD');
 		$('#uniform-printbtns').attr("onClick", "opmapwin('" + newobj.outname + "')");
 	});
@@ -1672,6 +1672,8 @@ function Clickhereformap(mainid) {
 
 function opmapwin(outname) {
 	window.open("https://dola.colorado.gov/tmp/" + outname + ".png");
+	//window.open(outname + ".png");
+	//window.open("https://gis.dola.colorado.gov/phantom/screenshot?website=https://dola.colorado.gov/gis-php/phantomComprPoverty.html?agef=5&aget=9&lat=39.7299&lng=-104.9499&title=test&pct=2&zoom=13&filename=components&timer=6000&width=900");
 	$('#printspan').html("Print Map");
 	$('#uniform-printbtns').attr("onClick", "javascript:Clickhereformap('uniform-printbtns')");
 }
