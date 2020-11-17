@@ -58,7 +58,7 @@ function initOperationalLayer(map) {
 	}, dojo.byId("search"));
 
 	esri.config.defaults.map.logoLink = "https://dola.colorado.gov/";
-	document.getElementsByClassName('logo-med')[0].style.backgroundImage = "url(\"https://dola.colorado.gov/gis-php/files/gis-images/CO_LOGO.png\")";
+	document.getElementsByClassName('logo-med')[0].style.backgroundImage = "url('/.../img/CO_LOGO.png')";
 	document.getElementsByClassName('logo-med')[0].style.backgroundRepeat = "no-repeat";
 
 	// start widget
