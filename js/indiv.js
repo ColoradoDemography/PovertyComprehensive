@@ -28,7 +28,7 @@ function init() {
 	dojo.connect(map, "onLoad", initOperationalLayer);
 
 	dojo.byId("title").innerHTML = "Poverty by Age by Ratio";
-	dojo.byId("subtitle").innerHTML = "Source: Table B17024, ACS 2014-2018 5Y : Census Tracts";
+	dojo.byId("subtitle").innerHTML = "Source: Table B17024, ACS 2015-2019 5Y : Census Tracts";
 }
 
 function initOperationalLayer(map) {
@@ -69,7 +69,7 @@ function initOperationalLayer(map) {
 	infoTemplate.setContent(getText);
 
 
-	featureLayer = new esri.layers.FeatureLayer("https://services.arcgis.com/IamIM3RJ5xHykalK/arcgis/rest/services/PovertyComprehensive_1418/FeatureServer/0", {
+	featureLayer = new esri.layers.FeatureLayer("https://services.arcgis.com/IamIM3RJ5xHykalK/arcgis/rest/services/Poverty_Comprehensive_1519/FeatureServer/0", {
 		mode : esri.layers.FeatureLayer.MODE_ONDEMAND,
 		outFields : ["*"],
 		infoTemplate : infoTemplate
