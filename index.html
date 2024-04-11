@@ -54,7 +54,7 @@
 
       <div id="header" class="shadow roundedCorners" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'top'">
 
-        <div id="title"></div>
+        <div id="title"><h1></h1></div>
         <div id="subtitle"></div>
 
       </div>
@@ -62,23 +62,7 @@
 
     </div>
 	
-	<div id="povlevel">
-		<span>Percent of Individuals:</span>	
-		<select id="levelinput" onChange="handleClick();">
-		<option value="0" >Below 50% Poverty</option>
-		<option value="1">Below 75% Poverty</option>
-		<option value="2" selected>Below 100% Poverty</option>
-		<option value="3">Below 125% Poverty</option>
-		<option value="4">Below 150% Poverty</option>
-		<option value="5">Below 175% Poverty</option>
-		<option value="6">Below 185% Poverty</option>	
-		<option value="7">Below 200% Poverty</option>
-		<option value="8">Below 300% Poverty</option>
-		<option value="9">Below 400% Poverty</option>	
-		<option value="10">Below 500% Poverty</option>		
-		<option value="11">At or Above 500% Poverty</option>				
-		</select>
-	</div>
+	
 
 	
 	<div id="af_box">
@@ -112,9 +96,27 @@
 		<option value="9" selected>No Limit</option>		
 		</select>
 	</div>
-	
+
 	<span id="at_label">To:</span>	
-	
+
+	<div id="povlevel">
+		<span>Percent of Individuals:</span>	
+		<select id="levelinput" onChange="handleClick();">
+		<option value="0" >Below 50% Poverty</option>
+		<option value="1">Below 75% Poverty</option>
+		<option value="2" selected>Below 100% Poverty</option>
+		<option value="3">Below 125% Poverty</option>
+		<option value="4">Below 150% Poverty</option>
+		<option value="5">Below 175% Poverty</option>
+		<option value="6">Below 185% Poverty</option>	
+		<option value="7">Below 200% Poverty</option>
+		<option value="8">Below 300% Poverty</option>
+		<option value="9">Below 400% Poverty</option>	
+		<option value="10">Below 500% Poverty</option>		
+		<option value="11">At or Above 500% Poverty</option>				
+		</select>
+	</div>
+	  
 	<div id="legendDiv" style="display:none;"></div>
 
 	
