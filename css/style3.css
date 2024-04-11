@@ -171,11 +171,11 @@ table.smallfont td {
 }
 
 div.button span {
-	font-family: Copse, Georgia, serif;
+	font-family: verdana, arial, sans-serif;
 }
 
 body {
-	font-family: Copse, Georgia, serif;
+	font-family: verdana, arial, sans-serif;
 }
 
 .btnspan {
@@ -189,7 +189,7 @@ body {
 
 #title {
 	color: rgb(68,121,170);
-	font-family: Copse, Georgia, serif;
+	font-family: verdana, arial, sans-serif;
 	font-size: 24px;
 	font-style: normal;
 	font-variant: normal;
@@ -207,7 +207,7 @@ body {
 
 #subtitle {
 	color: rgb(32,60,85);
-	font-family: Copse, Georgia, serif;
+	font-family: verdana, arial, sans-serif;
 	outline-color: rgb(143, 2, 6);
 	outline-style: none;
 	outline-width: 0px;
@@ -230,7 +230,7 @@ body {
 	right: 20px;
 	text-align: center;
 	cursor: pointer;
-	font-family: Copse, Georgia, serif;
+	font-family: verdana, arial, sans-serif;
 	color: #444;
 }
 
