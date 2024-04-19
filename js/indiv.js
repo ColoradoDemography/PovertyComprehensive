@@ -1492,8 +1492,8 @@ function handleClick() {
 		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([49, 54, 149, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
 		label : "> 50%"
 	});	
-	render.defaultSymbol = esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([165, 0, 38, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL));
-	render.defaultLabel = '';	
+	renderer.defaultSymbol = esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([165, 0, 38, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL));
+	renderer.defaultLabel = '';	
 	featureLayer.setRenderer(renderer);
 	featureLayer.redraw();
 	}else{
@@ -1566,7 +1566,7 @@ function handleClick() {
 		label : "> 50%"
 	});	
 	renderer.defaultSymbol = esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([39, 100, 25, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL));	
-	render.defaultLabel = '';
+	renderer.defaultLabel = '';
 	featureLayer.setRenderer(renderer);
 	featureLayer.redraw();
 
