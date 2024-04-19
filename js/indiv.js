@@ -1419,7 +1419,9 @@ function handleClick() {
 	mapvar = mapvar + " 0)/("+ttlvar+" 0))*100;"
 
 	}	
-	
+	if (isNaN(mapvar) === true){
+		mapvar = 0;
+	}
 
 	map.infoWindow.hide();
 	
@@ -1500,67 +1502,67 @@ function handleClick() {
 	renderer.addBreak({
 		minValue : 0,
 		maxValue : 5,
-		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([0, 104, 55, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
+		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([39, 100, 25, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
 		label : "< 5% of Population"
 	});
 	renderer.addBreak({
 		minValue : 5,
 		maxValue : 10,
-		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([26, 152, 80, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
+		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([77, 146, 33, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
 		label : "5% to 10%"
 	});
 	renderer.addBreak({
 		minValue : 10,
 		maxValue : 15,
-		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([102, 189, 99, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
+		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([127, 188, 65, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
 		label : "10% to 15%"
 	});
 	renderer.addBreak({
 		minValue : 15,
 		maxValue : 20,
-		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([166, 217, 106, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
+		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([184, 225, 134, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
 		label : "15% to 20%"
 	});
 	renderer.addBreak({
 		minValue : 20,
 		maxValue : 25,
-		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([217, 239, 139, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
+		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([230, 245, 208, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
 		label : "20% of 25%"
 	});
 	renderer.addBreak({
 		minValue : 25,
 		maxValue : 30,
-		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([255, 255, 191, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
+		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([247, 247, 247, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
 		label : "25% to 30%"
 	});
 	renderer.addBreak({
 		minValue : 30,
 		maxValue : 35,
-		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([254, 224, 139, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
+		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([253, 224, 239, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
 		label : "30% to 35%"
 	});
 	renderer.addBreak({
 		minValue : 35,
 		maxValue : 40,
-		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([253, 174, 97, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
+		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([241, 182, 218, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
 		label : "35% to 40%"
 	});
 	renderer.addBreak({
 		minValue : 40,
 		maxValue : 45,
-		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([244, 109, 67, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
+		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([222, 119, 174, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
 		label : "40% to 45%"
 	});
 	renderer.addBreak({
 		minValue : 45,
 		maxValue : 50,
-		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([215, 48, 39, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
+		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([197, 27, 125, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
 		label : "45% to 50%"
 	});
 	renderer.addBreak({
 		minValue : 50,
 		maxValue : Infinity,
-		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([165, 0, 38, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
+		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([142, 1, 82, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
 		label : "> 50%"
 	});	
 	featureLayer.setRenderer(renderer);
