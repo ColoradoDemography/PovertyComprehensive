@@ -1417,11 +1417,9 @@ function handleClick() {
 	if(group9){mapvar = mapvar + "graphic.attributes.T74L + "; ttlvar = ttlvar + "graphic.attributes.T74 +";}
 	if(group10){mapvar = mapvar + "graphic.attributes.T99L + "; ttlvar = ttlvar + "graphic.attributes.T99 +";}	
 	mapvar = mapvar + " 0)/("+ttlvar+" 0))*100;"
-
+	if(ttlvar === 0){mapvar=0;}
 	}	
-	if (Number.isNaN(mapvar) === true){
-		mapvar = 0;
-	}
+	
 
 	map.infoWindow.hide();
 	
