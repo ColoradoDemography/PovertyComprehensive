@@ -1564,6 +1564,7 @@ function handleClick() {
 		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([142, 1, 82, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
 		label : "> 50%"
 	});	
+	renderer.defaultSymbol = esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([39, 100, 25, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL));	
 	featureLayer.setRenderer(renderer);
 	featureLayer.redraw();
 
