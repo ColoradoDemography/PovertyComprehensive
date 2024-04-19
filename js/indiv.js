@@ -1419,7 +1419,7 @@ function handleClick() {
 	mapvar = mapvar + " 0)/("+ttlvar+" 0))*100;"
 
 	}	
-	if (isNaN(mapvar) === true){
+	if (Number.isNaN(mapvar) === true){
 		mapvar = 0;
 	}
 
