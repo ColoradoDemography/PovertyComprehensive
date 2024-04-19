@@ -1426,6 +1426,7 @@ function handleClick() {
 	
 	if(level=="11"){  //renderer specifically for >500%
 		var renderer = new esri.renderer.ClassBreaksRenderer(false, function (graphic) {return(eval(mapvar))});
+		renderer.defaultLabel = '';
 	renderer.addBreak({
 		minValue : -Infinity,
 		maxValue : 5,
@@ -1493,12 +1494,13 @@ function handleClick() {
 		label : "> 50%"
 	});	
 	renderer.defaultSymbol = esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([165, 0, 38, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL));
-	renderer.defaultLabel = '';	
+	
 	featureLayer.setRenderer(renderer);
 	featureLayer.redraw();
 	}else{
 	
 	var renderer = new esri.renderer.ClassBreaksRenderer(false, function (graphic) {return(eval(mapvar))});
+		renderer.defaultLabel = '';
 	renderer.addBreak({
 		minValue : -Infinity,
 		maxValue : 5,
@@ -1566,7 +1568,7 @@ function handleClick() {
 		label : "> 50%"
 	});	
 	renderer.defaultSymbol = esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([39, 100, 25, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL));	
-	renderer.defaultLabel = '';
+	
 	featureLayer.setRenderer(renderer);
 	featureLayer.redraw();
 
