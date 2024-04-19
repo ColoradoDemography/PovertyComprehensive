@@ -1416,8 +1416,7 @@ function handleClick() {
 	if(group8){mapvar = mapvar + "graphic.attributes.T64L + "; ttlvar = ttlvar + "graphic.attributes.T64 +";}
 	if(group9){mapvar = mapvar + "graphic.attributes.T74L + "; ttlvar = ttlvar + "graphic.attributes.T74 +";}
 	if(group10){mapvar = mapvar + "graphic.attributes.T99L + "; ttlvar = ttlvar + "graphic.attributes.T99 +";}	
-	if(ttlvar == 0){mapvar = 0;console.log("No pop");}else
-	{mapvar = mapvar + " 0)/("+ttlvar+" 0))*100;"}
+	mapvar = mapvar + " 0)/("+ttlvar+" 0))*100;"
 	
 	}	
 	
