@@ -1417,7 +1417,7 @@ function handleClick() {
 	if(group9){mapvar = mapvar + "graphic.attributes.T74L + "; ttlvar = ttlvar + "graphic.attributes.T74 +";}
 	if(group10){mapvar = mapvar + "graphic.attributes.T99L + "; ttlvar = ttlvar + "graphic.attributes.T99 +";}	
 	mapvar = mapvar + " 0)/("+ttlvar+" 0))*100;"
-	if(ttlvar === 0){mapvar=0;}
+	
 	}	
 	
 
@@ -1427,7 +1427,7 @@ function handleClick() {
 	if(level=="11"){  //renderer specifically for >500%
 		var renderer = new esri.renderer.ClassBreaksRenderer(false, function (graphic) {return(eval(mapvar))});
 	renderer.addBreak({
-		minValue : 0,
+		minValue : -Infinity,
 		maxValue : 5,
 		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([165, 0, 38, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
 		label : "< 5% of Population"
@@ -1492,13 +1492,14 @@ function handleClick() {
 		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([49, 54, 149, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
 		label : "> 50%"
 	});	
+		
 	featureLayer.setRenderer(renderer);
 	featureLayer.redraw();
 	}else{
 	
 	var renderer = new esri.renderer.ClassBreaksRenderer(false, function (graphic) {return(eval(mapvar))});
 	renderer.addBreak({
-		minValue : 0,
+		minValue : -Infinity,
 		maxValue : 5,
 		symbol : new esri.symbol.SimpleFillSymbol().setColor(new dojo.Color([39, 100, 25, 0.5])).setOutline(new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_NULL)),
 		label : "< 5% of Population"
