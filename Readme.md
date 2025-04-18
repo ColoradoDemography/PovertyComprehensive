@@ -7,7 +7,7 @@ Data for map is maintained in ArcGIS Online and updated each year with the new A
 To update the data:
 1. Download table B17024 for all tracts in Colorado, including the MOE.
 2. In the downloaded spreadsheet, create a new column for GEOID (11 digit code, 08 for Colorado, three digits for county code and 6 digits for tract code.
-3. Delete the Unique ID column and the top row.
+3. Delete the other non-data columns besides GEOID and the top row.
 4. From a previous version of the data, copy the column headers and past them in place of the existing column headers.
 5. Attach the spreadsheet to a census tract shapefile and delete unnecessary columns (everything but the geoid and data rows).
 6. Upload the shapefile into ArcGIS Online.
